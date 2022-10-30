@@ -13,12 +13,18 @@ body{
     border-radius: 3%;
 }
 #playArea {
-    display:flex;
-    justify-content: center;
+    display:grid;
     margin: 100px;
     background-color: rgb(177, 171, 171);
     height: 800px;
     width: 500px;
 }
 #areaRange {
+}
+
+#gridSquare {
+    border: solid black 1px;
+    background-color: white;
+    display:flex;
+    flex-grow: 1;
 }
