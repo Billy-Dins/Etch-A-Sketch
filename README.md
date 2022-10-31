@@ -2,4 +2,8 @@
 Odin Project Etch-A-Sketch
 
 To do:
-1. implement slider so that when I make a selection, it auto updates and adds the amount of divs on the canvas
+1. Add a navigation bar
+2. To the navigation bar allow the play to make a selection to change pointer to...
+    -rainbow
+    -greyscale
+    -darker on each pass
