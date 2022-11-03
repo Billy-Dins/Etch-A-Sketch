@@ -2,7 +2,7 @@ let canvas = document.querySelector('#playArea');
 let canvasAttributes = document.querySelector('#playArea');
 let canvasRange = document.querySelector("#areaRange");
 window.addEventListener('load', onloadCanvas('grey'));
-let pixelColor = 'grey'
+let gridSqr = document.querySelector('#gridSquare');
 
 canvasRange.addEventListener('change', () => {
     rangeChange('grey');
@@ -24,7 +24,6 @@ function onloadCanvas(pixelColor) {
 };
 
 function rangeChange(pixelColor) {
-    console.log(pixelColor)
     let rangeValue = document.querySelector('#areaRange').value;
     let valueSquared = (rangeValue * rangeValue);
     let autoStr = 'auto '.repeat(rangeValue);
@@ -42,23 +41,22 @@ function rangeChange(pixelColor) {
 }};
 
 function colorChange(pixelColor){
-    console.log(pixelColor)
     let totalGrid = document.querySelectorAll('#gridSquare');
-    totalGrid.forEach(sqr => {
-    sqr.addEventListener('mouseover', () => {
-        if (pixelColor == 'grey'){
-            sqr.setAttribute('style', "background-color:grey")
-        } else if (pixelColor == 'rainbow'){
-            var x = Math.floor(Math.random() * 256);
-            var y = Math.floor(Math.random() * 256);
-            var z = Math.floor(Math.random() * 256);
-            sqr.setAttribute('style', "background-color:rgb(" + x + "," + y + "," + z + ")")
-        } else if (pixelColor == 'darken'){
-            console.log('idk yet')}
+        totalGrid.forEach(sqr => {
+        sqr.addEventListener('mouseover', () => {
+            if (pixelColor == 'grey'){
+                sqr.setAttribute('style', "background-color:grey")
+            } else if (pixelColor == 'rainbow'){
+                var x = Math.floor(Math.random() * 256);
+                var y = Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+                sqr.setAttribute('style', "background-color:rgb(" + x + "," + y + "," + z + ")")
+            } else if (pixelColor == 'white'){
+                sqr.setAttribute('style', 'background-color:white');
+            }
         });
-    });
+    }); 
 }
-
 function clear() {
     let rangeValue = document.querySelector('#areaRange').value;
     let valueSquared = (rangeValue * rangeValue);
@@ -71,8 +69,7 @@ function clear() {
             let gridSqr = document.createElement('div')
             gridSqr.setAttribute('id', 'gridSquare');
             canvas.appendChild(gridSqr);
-    };
-colorChange(pixelColor)
+    }; colorChange('grey')
 };
 
 let reset = document.querySelector('#resetBtn')
@@ -80,21 +77,18 @@ reset.addEventListener('click', clear)
 
 let grey = document.querySelector('#greyBtn')
 grey.addEventListener('click', function getColor() {
-    var pixelColor = 'grey'
+    pixelColor = 'grey'
     colorChange(pixelColor)
-    return pixelColor;
 });
 
 let rainbow = document.querySelector('#rainbowBtn')
 rainbow.addEventListener('click', function getColor() {
     var pixelColor = 'rainbow'
     colorChange(pixelColor)
-    return pixelColor;
 });
 
-let darken = document.querySelector('#darkenBtn')
-darken.addEventListener('click', function getColor() {
-    var pixelColor = 'darken'
+let eraser = document.querySelector('#eraser')
+eraser.addEventListener('click', function color() {
+    var pixelColor ='white'
     colorChange(pixelColor)
-    return pixelColor;
 });

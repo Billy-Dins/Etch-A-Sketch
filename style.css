@@ -1,26 +1,29 @@
 body{
-    background-color: rgb(39, 199, 199);
+    background-color: rgb(39, 38, 38);
     display:flex;
     justify-content: center;
+    flex-shrink: 1;
 }
 h1{
-    color: rgb(255, 171, 45);
+    font-size: xx-large;
+    color: rgb(255, 195, 65);
     text-shadow: 2px 2px black;
 }
 #etchBorder {
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
+    padding: 25px;
     align-items: center;
     margin: 25% 10% 5% 0;
     height: 800px;
     width: 700px;
     background-color: rgb(255, 61, 61);
     border-radius: 3%;
+    box-shadow: 0px -20px rgb(156, 37, 37);
 }
 #playArea {
     display:grid;
-    margin: 50px;
+    margin-bottom: 50px;
     background-color: rgb(177, 171, 171);
     height: 500px;
     width: 500px;
@@ -34,36 +37,32 @@ h1{
     background-color: red;
     border: 1px solid black;
 }
-#btns{
-    display:flex;
-    height: 75px;
-}
-#rainbowAccent{
-    
-}
-#greyAccent{
-    background-color: grey;
-}
-#darkenAccent{
-
-}
 #gridSquare {
     border: solid black 1px;
     background-color: white;
     display:flex;
     flex-grow: 1;
 }
+#btns{
+    display:flex;
+    width: 500px;
+    justify-content: space-between;
+    height: 125px;
+}
 button {
-    margin: 5px;
-    height: 50px;
-    background-color: rgb(255, 192, 97);
+    height: 90px;
+    width: 90px;
+    background-color: rgb(233, 233, 233);
     color:black;
-    border: 1px solid black;
+    border: 7px solid white;
     border-radius: 50%;
-    box-shadow: 2px 2px black;
 }
 button:hover{
-    border: solid 1px black;
-    height: 60px;
-    width: auto;
+    background-color: rgb(192, 192, 192)
+}
+#eraser, #resetBtn {
+    box-shadow: -1px -5px 0px 1px rgb(216, 215, 215);
+}
+#greyBtn, #rainbowBtn {
+    box-shadow: 1px -5px 0px 1px rgb(216, 215, 215);
 }
