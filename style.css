@@ -15,8 +15,8 @@ h1{
     padding: 25px;
     align-items: center;
     margin: 25% 10% 5% 0;
-    height: 800px;
-    width: 700px;
+    height: 65vh;
+    width: 50vw;
     background-color: rgb(255, 61, 61);
     border-radius: 3%;
     box-shadow: 0px -20px rgb(156, 37, 37);
@@ -27,12 +27,12 @@ h1{
     border: 8px solid rgb(104, 0, 0);
     border-radius: 10px;
     background-color: rgb(177, 171, 171);
-    height: 500px;
-    width: 500px;
+    height: 90vh;
+    min-width: 40vw;
 }
 #areaRange {
     accent-color:rgb(255, 171, 45);
-    width: 500px;
+    width: 41vw;
     margin: 0 50px 30px 50px;
 }
 .updatedColor {
@@ -47,16 +47,17 @@ h1{
 }
 #btns{
     display:flex;
-    width: 500px;
+    width: 41vw;
     justify-content: space-between;
-    height: 125px;
+    height: 15vw;
 }
 button {
-    height: 90px;
-    width: 90px;
+    font-size: 1vw;
+    max-height: 7vh;
+    min-width: 7vw;
     background-color: rgb(233, 233, 233);
     color:black;
-    border: 7px solid white;
+    border: .5vh solid white;
     border-radius: 50%;
 }
 button:hover{
