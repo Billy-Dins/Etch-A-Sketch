@@ -8,6 +8,7 @@ canvasRange.addEventListener('change', () => {
     rangeChange('grey');
 });
 
+//Only runs when the webpage is refreshed. Set canvas at specified size (HTML)
 function onloadCanvas(pixelColor) {
     let rangeValue = document.querySelector('#areaRange').value;
     let valueSquared = (rangeValue * rangeValue);
@@ -23,6 +24,8 @@ function onloadCanvas(pixelColor) {
     };
 };
 
+//This function changes the range and resets the canvas with the new range, 
+//deleting all previous pixels first.
 function rangeChange(pixelColor) {
     let rangeValue = document.querySelector('#areaRange').value;
     let valueSquared = (rangeValue * rangeValue);
@@ -40,6 +43,7 @@ function rangeChange(pixelColor) {
         });
 }};
 
+//Changes color of cursor based on button selection
 function colorChange(pixelColor){
     let totalGrid = document.querySelectorAll('#gridSquare');
         totalGrid.forEach(sqr => {
@@ -57,6 +61,8 @@ function colorChange(pixelColor){
         });
     }); 
 }
+
+//Basic reset button and reverts cursor to greyscale
 function clear() {
     let rangeValue = document.querySelector('#areaRange').value;
     let valueSquared = (rangeValue * rangeValue);
