@@ -12,4 +12,4 @@ Challenges I came across at the time and was not able to solve were;
 At the time I didn't understand scope and it's effect on variables so instead of declaring a pixel color variable for the mouse cursor in the global scope and manipulating it within the color selector functions, I declared a pixel color variable within each function which at the time, I could not figure out how to return to the global scope. This in hindsight is the solution to both the above mentioned problems.
 
 ### Available to view:
-https://billy-dins.github.io/todo-list/
+https://billy-dins.github.io/Etch-A-Sketch/
